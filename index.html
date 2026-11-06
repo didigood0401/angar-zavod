@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Завод пневмоангаров - демо дизайна главной</title>
+<meta name="description" content="Демо дизайна главной страницы сайта завода пневмоангаров по прототипу заказчика.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1621;--ink2:#1A2533;--mute:#5E6B7A;--line:#E3E8EE;--bg:#F4F6F8;--white:#fff;
+  --sky:#8FB9E3;--sky2:#CFE0F2;--steel:#3E6A93;--sig:#FF5A1F;--sig2:#FFE3D6;
+  --r:18px;--mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.55 Manrope,system-ui,sans-serif;color:var(--ink);background:var(--white)}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.demo{background:var(--ink);color:#c9d3de;font:500 13px/1.3 Manrope;text-align:center;padding:9px 16px}
+.demo b{color:#fff}
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:28px;height:74px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:800 20px/1 Manrope;letter-spacing:.08em}
+.logo small{display:block;font:500 11px/1.2 Manrope;color:var(--mute);margin-top:3px}
+nav{display:flex;gap:22px;font:600 14px/1 Manrope;margin-left:8px}
+nav a{text-decoration:none;color:#2b3846}
+nav a:hover{color:var(--sig)}
+.hc{margin-left:auto;text-align:right;font:700 15px/1.25 Manrope}
+.hc small{display:block;font:500 12px/1.2 Manrope;color:var(--mute)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:99px;padding:14px 22px;font:700 15px/1 Manrope;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,background .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-sig{background:var(--sig);color:#fff}
+.btn-sig:hover{background:#ec4c12}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+.btn-line{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+.k{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+h2{font:700 clamp(30px,3.6vw,46px)/1.08 Manrope;letter-spacing:-.025em;margin:12px 0 0}
+section{padding:96px 0}
+/* hero */
+.hero{padding:22px 0 0}
+.hbox{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#0F2236 0%,#1C3D5F 58%,#2E5A82 100%);color:#fff;min-height:640px;display:grid;grid-template-columns:1fr 1fr}
+.hbox .t{padding:84px 0 60px 64px;position:relative;z-index:2}
+.hbox h1{font:800 clamp(40px,5vw,68px)/1.0 Manrope;letter-spacing:-.035em}
+.hbox h1 span{color:var(--sky)}
+.hbox p{color:#c6d5e4;font-size:19px;max-width:470px;margin:22px 0 34px}
+.hbox .acts{display:flex;gap:12px;flex-wrap:wrap}
+.hbox .meta{display:flex;gap:28px;margin-top:56px;font:500 13px/1.3 var(--mono);color:#9fb6cc}
+.hbox .meta b{display:block;font:700 24px/1 Manrope;color:#fff;margin-bottom:6px}
+.vid{position:absolute;right:22px;top:22px;z-index:3;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:8px 14px 8px 8px;font:600 13px/1 Manrope}
+.vid i{width:30px;height:30px;border-radius:50%;background:var(--sig);display:grid;place-items:center}
+.scene{position:absolute;inset:0;z-index:1}
+/* stats */
+.about{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:start}
+.about p{color:var(--mute);font-size:17px;margin:18px 0 26px;max-width:520px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line)}
+.stats div{padding:26px 0 22px;border-bottom:1px solid var(--line)}
+.stats div:nth-child(odd){padding-right:20px;border-right:1px solid var(--line)}
+.stats div:nth-child(even){padding-left:28px}
+.stats b{display:block;font:800 52px/1 Manrope;letter-spacing:-.03em}
+.stats span{color:var(--mute);font-size:14px}
+.logos{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:56px}
+.logos div{height:64px;border-radius:12px;background:var(--bg);display:grid;place-items:center;font:500 12px/1 var(--mono);color:#94a2b1;letter-spacing:.08em}
+/* benefits */
+.bg{background:var(--bg)}
+.bhead{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:40px}
+.bhead p{color:var(--mute);font-size:17px}
+.ben{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ben div{background:#fff;border-radius:var(--r);padding:28px 26px;border:1px solid var(--line)}
+.ben b{display:block;font:800 40px/1 Manrope;letter-spacing:-.03em;color:var(--ink)}
+.ben b em{font-style:normal;color:var(--sig)}
+.ben h3{font:700 17px/1.3 Manrope;margin:12px 0 6px}
+.ben p{color:var(--mute);font-size:14.5px}
+/* products */
+.prod{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.pc{border-radius:22px;overflow:hidden;background:var(--bg);border:1px solid var(--line);text-decoration:none;display:block;transition:transform .2s ease}
+.pc:hover{transform:translateY(-4px)}
+.pc .img{height:250px;background:linear-gradient(180deg,#DCE8F4,#EEF3F8)}
+.pc .c{padding:20px 22px 24px;display:flex;justify-content:space-between;gap:12px;align-items:flex-end}
+.pc h3{font:700 22px/1.15 Manrope}
+.pc span{display:block;color:var(--mute);font-size:14px;margin-top:6px}
+.arr{width:46px;height:46px;flex:none;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center}
+/* uses */
+.uses{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.u{border-radius:20px;overflow:hidden;position:relative;height:360px;background:#16283b;color:#fff}
+.u .lab{position:absolute;left:18px;bottom:16px;right:18px}
+.u .lab b{font:700 20px/1.2 Manrope;display:block}
+.u .lab span{color:#b7c8d9;font-size:14px}
+/* dev */
+.dev{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:14px;margin-top:40px}
+.dv{border-radius:22px;padding:28px;min-height:330px;display:flex;flex-direction:column;border:1px solid var(--line)}
+.dv .k{color:#8aa2ba}
+.dv h3{font:700 24px/1.15 Manrope;margin:10px 0 10px}
+.dv p{color:var(--mute);font-size:15px}
+.dv.dark{background:var(--ink);color:#fff;border:0}
+.dv.dark p{color:#aebdcc}
+.dv.sky{background:var(--sky2);border:0}
+.dv .big{margin-top:auto;font:800 64px/1 Manrope;letter-spacing:-.04em}
+.dv .big small{display:block;font:500 13px/1.3 Manrope;color:var(--mute);letter-spacing:0;margin-top:6px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.chips span{border:1px solid var(--line);border-radius:99px;padding:6px 12px;font:500 12.5px/1 var(--mono)}
+.play{margin-top:auto;display:flex;align-items:center;gap:12px;font:600 14px/1.3 Manrope}
+.play i{width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
+/* table */
+.tbl{margin-top:36px;border:1px solid var(--line);border-radius:20px;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:760px;font-size:15px}
+th,td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line)}
+th{font:700 14px/1.2 Manrope;background:var(--bg)}
+td:first-child{font-weight:600}
+th.us,td.us{background:var(--ink);color:#fff}
+td.us{background:#162434;font-weight:700}
+tr:last-child td{border-bottom:0}
+.ok{color:#2fbf71}
+/* projects */
+.ph{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.proj{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:36px}
+.pj{grid-column:span 2}
+.pj.wide{grid-column:span 3}
+.pj .img{border-radius:18px;height:240px;overflow:hidden;background:#20364d}
+.pj.wide .img{height:320px}
+.tags{display:flex;gap:6px;margin:12px 0 6px}
+.tags span{font:500 12px/1 var(--mono);border:1px solid var(--line);border-radius:99px;padding:6px 10px}
+.pj h3{font:700 18px/1.25 Manrope}
+/* steps */
+.how{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:36px;align-items:start}
+.how .img{border-radius:22px;height:440px;background:#20364d;position:relative;overflow:hidden}
+.kp{position:absolute;right:18px;top:18px;width:120px;height:120px;border-radius:50%;background:var(--sig);color:#fff;display:grid;place-items:center;text-align:center;font:800 16px/1.15 Manrope}
+.steps{list-style:none}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.steps li:first-child{padding-top:0}
+.steps i{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:500 14px/1 var(--mono);font-style:normal}
+.steps b{font:700 18px/1.3 Manrope;display:block}
+.steps span{color:var(--mute);font-size:14.5px}
+.gp{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.gp span{background:var(--bg);border-radius:99px;padding:8px 13px;font:600 13px/1 Manrope}
+/* calc */
+.calc{border-radius:28px;background:linear-gradient(135deg,#DCE8F4,#EEF3F8);padding:56px;display:grid;grid-template-columns:1fr 1.05fr;gap:48px}
+.calc p{color:var(--mute);margin-top:14px;font-size:17px}
+.prog{display:flex;gap:6px;margin-top:30px}
+.prog span{height:4px;flex:1;border-radius:3px;background:#b9cde1}
+.prog span:first-child{background:var(--ink)}
+.form{background:#fff;border-radius:22px;padding:28px;box-shadow:0 20px 50px rgba(14,22,33,.08)}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+label{display:block;font:600 13px/1.2 Manrope;color:var(--mute);margin-bottom:7px}
+input[type=number],input[type=text],input[type=tel]{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;font:600 16px/1 Manrope;color:var(--ink);background:#fff}
+input:focus{outline:2px solid var(--steel);outline-offset:1px}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
+.seg button{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:10px 15px;font:600 14px/1 Manrope;cursor:pointer;color:var(--ink)}
+.seg button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:8px 0 22px;font-size:15px}
+.opts label{display:flex;gap:10px;align-items:center;color:var(--ink);font-weight:500;margin:0}
+.opts input{width:18px;height:18px;accent-color:var(--ink)}
+.est{display:flex;justify-content:space-between;align-items:center;background:var(--bg);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.est b{font:800 22px/1 Manrope}
+.est span{font-size:13px;color:var(--mute)}
+/* lease */
+.lt{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lt>div{border-radius:24px;padding:36px;min-height:270px;display:flex;flex-direction:column;border:1px solid var(--line)}
+.lt h3{font:700 28px/1.15 Manrope;margin:10px 0 10px}
+.lt p{color:var(--mute)}
+.lt .dark{background:var(--ink);color:#fff;border:0}
+.lt .dark p{color:#aebdcc}
+.lt .acts{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;padding-top:22px}
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1.3fr;gap:56px}
+details{background:var(--bg);border-radius:16px;padding:20px 22px;margin-bottom:10px}
+summary{font:700 17px/1.3 Manrope;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";font:500 24px/1 Manrope;color:var(--steel)}
+details[open] summary::after{content:"−"}
+details p{color:var(--mute);margin-top:10px}
+/* articles */
+.art{background:var(--steel);color:#fff}
+.art .k{color:#cfe0f2}
+.arts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.ar .img{height:200px;border-radius:18px;background:#5b86ae;overflow:hidden}
+.ar .tags span{border-color:rgba(255,255,255,.35);color:#e3edf7}
+.ar h3{font:700 19px/1.3 Manrope}
+/* contact */
+.ct{background:var(--ink);color:#fff;border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.ct p{color:#aebdcc;margin:14px 0 26px}
+.ct dl{display:grid;gap:14px;font-size:15px}
+.ct dt{color:#8aa2ba;font-size:13px}
+.ct dd{font-weight:700}
+.ct label{color:#8aa2ba}
+.ct input{background:transparent;border:0;border-bottom:1.5px solid #3a4a5c;border-radius:0;color:#fff;padding:12px 0}
+.fld{margin-bottom:18px}
+.file{border:1.5px dashed #3a4a5c;border-radius:14px;padding:16px;text-align:center;font:600 14px/1 Manrope;color:#c6d5e4;margin:6px 0 16px}
+.ct .btn{width:100%;justify-content:center}
+.small{font-size:12.5px;color:#8aa2ba;margin-top:12px}
+footer{background:#0A1018;color:#9fb0c1;padding:56px 0 30px;margin-top:96px;font-size:14px}
+footer .g{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+footer b{color:#fff;display:block;margin-bottom:12px;font-size:15px}
+footer a{display:block;text-decoration:none;margin-bottom:8px}
+footer .bt{display:flex;justify-content:space-between;border-top:1px solid #1d2a38;margin-top:40px;padding-top:20px;font-size:13px}
+@media (max-width:1080px){nav{display:none}.hbox{grid-template-columns:1fr}.hbox .t{padding:56px 28px 300px}.about,.bhead,.how,.calc,.faq,.ct,.lt{grid-template-columns:1fr}.ben,.prod,.dev,.arts{grid-template-columns:1fr 1fr}.uses{grid-template-columns:1fr 1fr}.proj{grid-template-columns:1fr 1fr}.pj,.pj.wide{grid-column:span 1}.logos{grid-template-columns:repeat(3,1fr)}footer .g{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.hc{display:none}header.top .wrap{gap:12px}.ben,.prod,.dev,.arts,.uses,.proj{grid-template-columns:1fr}.calc,.ct{padding:28px 20px}.row3{grid-template-columns:1fr 1fr 1fr;gap:8px}.opts{grid-template-columns:1fr}.stats b{font-size:40px}.hbox .meta{gap:18px;flex-wrap:wrap}section{padding:72px 0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.pc:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <!-- пневмоангар: надувные арки -->
+  <symbol id="hangar" viewBox="0 0 400 220">
+    <path d="M20 200 V140 A180 130 0 0 1 380 140 V200 Z" fill="#F4F8FC"/>
+    <g fill="none" stroke="#C9D8E7" stroke-width="2.5">
+      <path d="M60 200 V148 A140 102 0 0 1 340 148 V200"/><path d="M100 200 V156 A100 76 0 0 1 300 156 V200"/>
+      <path d="M200 10 V200"/><path d="M140 16 C150 70 152 130 150 200"/><path d="M260 16 C250 70 248 130 250 200"/>
+      <path d="M80 34 C100 80 108 140 104 200"/><path d="M320 34 C300 80 292 140 296 200"/>
+    </g>
+    <path d="M20 200 V140 A180 130 0 0 1 380 140 V200" fill="none" stroke="#E7EEF5" stroke-width="3"/>
+    <rect x="168" y="128" width="64" height="72" rx="3" fill="#1A2533"/><path d="M168 146 H232 M168 164 H232 M168 182 H232" stroke="#2C3B4D" stroke-width="2"/>
+    <rect x="0" y="198" width="400" height="10" fill="#9DB3C9"/>
+  </symbol>
+  <symbol id="hangar3" viewBox="0 0 400 220">
+    <g fill="#F4F8FC"><path d="M10 200 V150 A63 70 0 0 1 136 150 V200Z"/><path d="M136 200 V140 A64 80 0 0 1 264 140 V200Z"/><path d="M264 200 V150 A63 70 0 0 1 390 150 V200Z"/></g>
+    <g fill="none" stroke="#C9D8E7" stroke-width="2.5"><path d="M73 80 V200 M200 60 V200 M327 80 V200"/></g>
+    <rect x="178" y="146" width="44" height="54" fill="#1A2533"/><rect x="0" y="198" width="400" height="10" fill="#9DB3C9"/>
+  </symbol>
+</defs></svg>
+
+<div class="demo"><b>Демо-дизайн главной</b> по вашему прототипу, ТЗ-структуре и блокам · фото и цифры - плейсхолдеры, подставим ваши</div>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#"><svg width="38" height="38" viewBox="0 0 38 38"><rect width="38" height="38" rx="10" fill="#0E1621"/><path d="M7 29 V20 A12 12 0 0 1 31 20 V29" fill="none" stroke="#8FB9E3" stroke-width="3"/><path d="M13 29 V22 A6 6 0 0 1 25 22 V29" fill="none" stroke="#FF5A1F" stroke-width="3"/></svg><div><b>CHROMAX</b><small>Завод пневмоангаров · Тольятти</small></div></a>
+  <nav><a href="#prod">Продукция</a><a href="#dev">Технологии</a><a href="#use">Применение</a><a href="#how">Услуги</a><a href="#proj">Проекты</a><a href="#about">О заводе</a><a href="#ct">Контакты</a></nav>
+  <div class="hc">8 800 000-00-00<small>info@chromax.ru</small></div>
+  <a class="btn btn-sig" href="#ct">Получить КП</a>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <div class="hbox">
+    <div class="t">
+      <div class="k" style="color:#9fc2e4">Собственное производство · КБ · монтаж</div>
+      <h1 style="margin-top:18px">Завод<br>пневмо&shy;ангаров<br><span>в Тольятти</span></h1>
+      <p>Склад, цех или манеж под ключ за 30 дней. Без разрешения на строительство и без налога на имущество.</p>
+      <div class="acts"><a class="btn btn-sig" href="#ct">Получить КП за 1 день</a><a class="btn btn-ghost" href="#ct">Отправить ТЗ на просчёт ↗</a></div>
+      <div class="meta"><div><b>30 дней</b>от договора до запуска</div><div><b>до 40 м</b>пролёт без опор</div><div><b>400+</b>объектов</div></div>
+    </div>
+    <div class="vid"><i><svg width="12" height="12" viewBox="0 0 12 12"><path d="M3 1.5 L10.5 6 L3 10.5Z" fill="#fff"/></svg></i>Видео: дрон над заводом</div>
+    <svg class="scene" viewBox="0 0 1200 640" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+      <defs><radialGradient id="sun" cx="78%" cy="30%" r="40%"><stop offset="0" stop-color="#FFB58A" stop-opacity=".55"/><stop offset="1" stop-color="#FFB58A" stop-opacity="0"/></radialGradient>
+      <linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#36628B"/><stop offset="1" stop-color="#1B3651"/></linearGradient></defs>
+      <rect width="1200" height="640" fill="url(#sun)"/>
+      <path d="M560 470 L1200 420 L1200 640 L420 640Z" fill="url(#gr)"/>
+      <svg x="600" y="190" width="560" height="310"><use href="#hangar"/></svg>
+      <svg x="520" y="330" width="220" height="122" opacity=".9"><use href="#hangar3"/></svg>
+      <path d="M560 520 L1200 500" stroke="#FF5A1F" stroke-width="2" stroke-dasharray="10 10" opacity=".7"/>
+    </svg>
+  </div>
+</div>
+
+<section id="about"><div class="wrap">
+  <div class="about">
+    <div><div class="k">О заводе</div><h2>Проектируем, производим и&nbsp;монтируем пневмоангары</h2>
+      <p>Собственное производство и конструкторское бюро в Тольятти. Берём объект под ключ: от проекта и основания до инженерных систем и пусконаладки.</p>
+      <a class="btn btn-line" href="#about">Подробнее о заводе ↗</a></div>
+    <div class="stats"><div><b>8 лет</b><span>производим пневмоангары</span></div><div><b>400</b><span>реализованных объектов</span></div><div><b>30 дней</b><span>от договора до запуска</span></div><div><b>40 м</b><span>максимальный пролёт</span></div></div>
+  </div>
+  <div class="logos"><div>ЛОГОТИП КЛИЕНТА</div><div>ЛОГОТИП КЛИЕНТА</div><div>ЛОГОТИП КЛИЕНТА</div><div>ЛОГОТИП КЛИЕНТА</div><div>ЛОГОТИП КЛИЕНТА</div></div>
+</div></section>
+
+<section class="bg"><div class="wrap">
+  <div class="bhead"><h2>Пневмоангар - здание, которое работает через 30 дней</h2><p>Сегодня пустая площадка, через месяц - склад, цех или гараж. Конструкцию держат надувные арки из армированной ПВХ-ткани.</p></div>
+  <div class="ben">
+    <div><b>в <em>5</em> раз</b><h3>Быстрее каркасно-тентового</h3><p>И в 12 раз быстрее капитального строительства с учётом документов.</p></div>
+    <div><b>в <em>3</em> раза</b><h3>Дешевле каркасно-тентового</h3><p>И минимум в 5 раз дешевле здания из сэндвич-панелей под ключ.</p></div>
+    <div><b><em>0</em> ₽</b><h3>Налог на имущество</h3><p>Некапитальное сооружение: не нужны разрешение на строительство и согласования.</p></div>
+    <div><b>Лизинг</b><h3>Движимое имущество</h3><p>Ангар можно оформить в лизинг и не вынимать оборотные средства.</p></div>
+    <div><b>Любое</b><h3>Основание</h3><p>Грунт, гравий, асфальтовая крошка, плиты или бетон - универсальная система крепления.</p></div>
+    <div><b>Мобильность</b><h3>Расширить или перевезти</h3><p>Ангар можно нарастить, разделить перегородками, разобрать и смонтировать на новом месте.</p></div>
+  </div>
+</div></section>
+
+<section id="prod"><div class="wrap">
+  <div class="k">Продукция</div><h2>Три линейки под разные задачи</h2>
+  <div class="prod">
+    <a class="pc" href="#"><div class="img"><svg viewBox="0 0 400 250" width="100%" height="100%"><svg x="90" y="70" width="220" height="140"><use href="#hangar"/></svg></svg></div><div class="c"><div><h3>Chromax Ангар</h3><span>Пролёт 10-25 м · основной размерный ряд</span></div><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0E1621" stroke-width="2" stroke-linecap="round"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span></div></a>
+    <a class="pc" href="#"><div class="img"><svg viewBox="0 0 400 250" width="100%" height="100%"><svg x="30" y="30" width="340" height="190"><use href="#hangar"/></svg></svg></div><div class="c"><div><h3>Chromax Гига</h3><span>Пролёт 30-40 м · крупные объекты</span></div><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0E1621" stroke-width="2" stroke-linecap="round"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span></div></a>
+    <a class="pc" href="#"><div class="img"><svg viewBox="0 0 400 250" width="100%" height="100%"><svg x="40" y="60" width="320" height="170"><use href="#hangar3"/></svg></svg></div><div class="c"><div><h3>Chromax LAAB</h3><span>Решения под задачу · секционные ангары</span></div><span class="arr"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0E1621" stroke-width="2" stroke-linecap="round"><path d="M4 12 L12 4 M6 4 H12 V10"/></svg></span></div></a>
+  </div>
+</div></section>
+
+<section id="use" class="bg"><div class="wrap">
+  <div class="k">Применение</div><h2>Для каких задач</h2>
+  <div class="uses">
+    <div class="u"><svg viewBox="0 0 300 360" width="100%" height="100%" aria-hidden="true"><rect width="300" height="360" fill="#1D3247"/><path d="M0 360 V150 A150 120 0 0 1 300 150 V360Z" fill="#26425E"/><g fill="#C98F3E"><rect x="30" y="200" width="70" height="110"/><rect x="115" y="200" width="70" height="110"/><rect x="200" y="200" width="70" height="110"/></g><g stroke="#1D3247" stroke-width="4"><path d="M30 236 H270 M30 272 H270"/></g></svg><div class="lab"><b>Склады</b><span>Холодные и отапливаемые</span></div></div>
+    <div class="u"><svg viewBox="0 0 300 360" width="100%" height="100%" aria-hidden="true"><rect width="300" height="360" fill="#1D3247"/><path d="M0 360 V150 A150 120 0 0 1 300 150 V360Z" fill="#26425E"/><rect x="50" y="210" width="190" height="70" rx="10" fill="#FF5A1F"/><rect x="190" y="180" width="60" height="50" rx="6" fill="#FF5A1F"/><circle cx="90" cy="290" r="22" fill="#0E1621"/><circle cx="210" cy="290" r="22" fill="#0E1621"/></svg><div class="lab"><b>Ремцеха и гаражи</b><span>Для грузовиков и спецтехники</span></div></div>
+    <div class="u"><svg viewBox="0 0 300 360" width="100%" height="100%" aria-hidden="true"><rect width="300" height="360" fill="#1D3247"/><path d="M0 360 V150 A150 120 0 0 1 300 150 V360Z" fill="#26425E"/><rect x="20" y="250" width="260" height="20" fill="#8FB9E3"/><g fill="#CFE0F2"><rect x="40" y="200" width="40" height="50"/><rect x="130" y="190" width="40" height="60"/><rect x="220" y="205" width="40" height="45"/></g></svg><div class="lab"><b>Производство</b><span>Цеха и временные площадки</span></div></div>
+    <div class="u"><svg viewBox="0 0 300 360" width="100%" height="100%" aria-hidden="true"><rect width="300" height="360" fill="#1D3247"/><path d="M0 360 V150 A150 120 0 0 1 300 150 V360Z" fill="#2E6B47"/><g fill="none" stroke="#fff" stroke-width="3"><rect x="30" y="200" width="240" height="120"/><path d="M150 200 V320"/><circle cx="150" cy="260" r="26"/></g></svg><div class="lab"><b>Спорт</b><span>Манежи и корты</span></div></div>
+  </div>
+</div></section>
+
+<section id="dev"><div class="wrap">
+  <div class="k">Наши разработки</div><h2>Решили главные слабости пневмоангаров</h2>
+  <div class="dev">
+    <div class="dv dark"><div class="k">Сердце ангара</div><h3>Блок управления</h3><p>Следит за давлением и погодой, сам подкачивает арки и передаёт данные с датчиков.</p><div class="play"><i><svg width="14" height="14" viewBox="0 0 12 12"><path d="M3 1.5 L10.5 6 L3 10.5Z" fill="#0E1621"/></svg></i>Видео: директор показывает блок управления</div></div>
+    <div class="dv sky"><div class="k">Собственная система</div><h3>Утепление</h3><p>Негорючий лёгкий материал 400 г/м² внутри оболочки.</p><div class="big">в 10 раз<small>ниже теплопотери: с 0,5 до 0,05</small></div></div>
+    <div class="dv"><div class="k">Конструкция</div><h3>Ткани и узлы</h3><p>ПВХ-ткань 750 и 900 г/м², запатентованная косынка распределяет нагрузку от снега и ветра.</p><div class="chips"><span>750 г/м²</span><span>900 г/м²</span><span>Патент</span></div></div>
+  </div>
+  <h2 style="margin-top:96px;font-size:clamp(26px,3vw,36px)">Сравнение с другими зданиями</h2><p style="color:var(--mute);margin-top:8px">Склад одинаковой площади под ключ</p>
+  <div class="tbl"><table>
+    <tr><th></th><th class="us">Пневмоангар Chromax</th><th>Каркасно-тентовое</th><th>Сэндвич-панели</th><th>Капитальное</th></tr>
+    <tr><td>Стоимость</td><td class="us">Базовая</td><td>в 3 раза дороже</td><td>в 5 раз дороже</td><td>[уточнить]</td></tr>
+    <tr><td>Срок</td><td class="us">до 30 дней</td><td>в 5 раз дольше</td><td>[уточнить]</td><td>в 12 раз дольше</td></tr>
+    <tr><td>Разрешение на строительство</td><td class="us"><span class="ok">✓</span> Не нужно</td><td>[уточнить]</td><td>[уточнить]</td><td>Нужно</td></tr>
+    <tr><td>Налог на имущество</td><td class="us"><span class="ok">✓</span> Нет</td><td>[уточнить]</td><td>[уточнить]</td><td>Есть</td></tr>
+    <tr><td>Перенос на новое место</td><td class="us"><span class="ok">✓</span> Да</td><td>[уточнить]</td><td>[уточнить]</td><td>Нет</td></tr>
+  </table></div>
+</div></section>
+
+<section id="proj" class="bg"><div class="wrap">
+  <div class="ph"><div><div class="k">Проекты</div><h2>Реализованные объекты</h2></div><a class="btn btn-line" href="#proj">Все проекты ↗</a></div>
+  <div class="proj">
+    <div class="pj wide"><div class="img"><svg viewBox="0 0 600 320" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="600" height="320" fill="#264966"/><rect y="250" width="600" height="70" fill="#3C6082"/><svg x="120" y="70" width="360" height="200"><use href="#hangar"/></svg></svg></div><div class="tags"><span>[Д×Ш] м</span><span>Склад</span></div><h3>[Назначение], [регион]</h3></div>
+    <div class="pj wide"><div class="img"><svg viewBox="0 0 600 320" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="600" height="320" fill="#2B4E6E"/><rect y="250" width="600" height="70" fill="#3C6082"/><svg x="60" y="100" width="480" height="170"><use href="#hangar3"/></svg></svg></div><div class="tags"><span>25×400 м</span><span>Секционный склад</span></div><h3>Кейс маркетплейса - по согласованию</h3></div>
+    <div class="pj"><div class="img"><svg viewBox="0 0 400 240" width="100%" height="100%"><rect width="400" height="240" fill="#22425F"/><svg x="70" y="60" width="260" height="150"><use href="#hangar"/></svg></svg></div><div class="tags"><span>[Д×Ш] м</span><span>Ремцех</span></div><h3>[Назначение], [регион]</h3></div>
+    <div class="pj"><div class="img"><svg viewBox="0 0 400 240" width="100%" height="100%"><rect width="400" height="240" fill="#1E3A55"/><svg x="40" y="40" width="320" height="180"><use href="#hangar"/></svg></svg></div><div class="tags"><span>28×28 м</span><span>Авиаангар</span></div><h3>[Назначение], [регион]</h3></div>
+    <div class="pj"><div class="img"><svg viewBox="0 0 400 240" width="100%" height="100%"><rect width="400" height="240" fill="#264966"/><svg x="40" y="70" width="320" height="150"><use href="#hangar3"/></svg></svg></div><div class="tags"><span>[Д×Ш] м</span><span>Аренда</span></div><h3>Склад в аренду, Нижний Тагил</h3></div>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="k">Генподряд</div><h2>Как мы работаем</h2>
+  <div class="how">
+    <div><p style="color:var(--mute);font-size:17px">Своё конструкторское бюро и инженеры. Делаем основание и инженерные системы, сдаём готовый объект.</p>
+      <div class="gp"><span>Основание</span><span>Отопление</span><span>Вентиляция</span><span>Пожарная безопасность</span><span>Видеонаблюдение</span></div>
+      <div class="img" style="margin-top:26px"><svg viewBox="0 0 600 440" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="600" height="440" fill="#21405D"/><rect y="340" width="600" height="100" fill="#355A7C"/><path d="M80 340 V250 A220 170 0 0 1 520 250 V340" fill="#F4F8FC" opacity=".25"/><path d="M80 340 V250 A220 170 0 0 1 520 250 V340" fill="none" stroke="#F4F8FC" stroke-width="4" stroke-dasharray="14 10"/><g fill="#FF5A1F"><circle cx="150" cy="330" r="10"/><circle cx="300" cy="330" r="10"/><circle cx="450" cy="330" r="10"/></g></svg><div class="kp">КП за 1<br>рабочий день</div></div></div>
+    <ol class="steps">
+      <li><i>01</i><div><b>Заявка или ТЗ</b><span>Принимаем техническое задание или помогаем его составить.</span></div></li>
+      <li><i>02</i><div><b>Расчёт и коммерческое предложение</b><span>Инженеры подбирают конфигурацию, комплектацию и отопление.</span></div></li>
+      <li><i>03</i><div><b>Договор и проект</b><span>Конструкторская модель, расчёт нагрузок, работа по тендерной документации.</span></div></li>
+      <li><i>04</i><div><b>Производство</b><span>Изготавливаем ангар на собственном заводе в Тольятти.</span></div></li>
+      <li><i>05</i><div><b>Доставка и монтаж</b><span>Монтаж, инженерные системы и пусконаладка на вашей площадке.</span></div></li>
+    </ol>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="calc" id="calc">
+  <div><div class="k">Расчёт стоимости</div><h2>Рассчитайте ангар за 2 минуты</h2><p>Укажите размеры и нужные опции - инженер пришлёт коммерческое предложение в течение рабочего дня.</p><div class="prog"><span></span><span></span><span></span><span></span></div><p style="font-size:13px;margin-top:10px">Шаг 1 из 4: размеры и назначение</p></div>
+  <div class="form">
+    <div class="row3"><div><label for="L">Длина, м</label><input id="L" type="number" value="60" min="10"></div><div><label for="W">Ширина, м</label><input id="W" type="number" value="24" min="10" max="40"></div><div><label for="H">Высота, м</label><input id="H" type="number" value="10" min="5"></div></div>
+    <label style="margin-top:18px">Назначение</label>
+    <div class="seg" role="group"><button class="on" type="button">Склад</button><button type="button">Ремцех / гараж</button><button type="button">Производство</button><button type="button">Спорт</button><button type="button">Другое</button></div>
+    <label>Опции</label>
+    <div class="opts"><label><input type="checkbox" checked> Утепление</label><label><input type="checkbox"> Отопление</label><label><input type="checkbox" checked> Освещение</label><label><input type="checkbox"> Ворота для техники</label></div>
+    <div class="est"><div><span>Площадь</span><br><b id="area">1 440 м²</b></div><div style="text-align:right"><span>Ориентир</span><br><b>по запросу</b></div></div>
+    <button class="btn btn-dark" type="button" style="width:100%;justify-content:center">Далее</button>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="lt">
+    <div><div class="k">Лизинг</div><h3>Ангар в лизинг</h3><p>Пневмоангар - движимое имущество, его можно оформить в лизинг. Аванс от [N]%.</p><div class="acts"><a class="btn btn-line" href="#ct">Узнать условия ↗</a></div></div>
+    <div class="dark"><div class="k" style="color:#8aa2ba">Для корпоративных заказчиков</div><h3>Работаем с тендерами</h3><p>Участвуем в закупках, работаем по вашему ТЗ, предоставляем полный пакет документов и референс-лист.</p><div class="acts"><a class="btn btn-sig" href="#ct">Пригласить в тендер</a><a class="btn btn-ghost" href="#ct">Отправить ТЗ</a></div><p style="margin-top:16px;font-weight:600;color:#fff">↓ Референс-лист, PDF</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap faq">
+  <div><div class="k">Вопросы</div><h2>Частые вопросы</h2><p style="color:var(--mute);margin-top:14px">Не нашли ответ - позвоните инженеру: 8 800 000-00-00</p></div>
+  <div>
+    <details open><summary>Что будет, если проткнуть ангар?</summary><p>[Ответ инженера - заполняет заказчик]</p></details>
+    <details><summary>Выдержит ли ангар снег и сильный ветер?</summary><p>[Ответ инженера]</p></details>
+    <details><summary>Как отапливать ангар зимой?</summary><p>[Ответ инженера]</p></details>
+    <details><summary>Какая гарантия и что в неё входит?</summary><p>[Ответ инженера]</p></details>
+    <details><summary>Можно ли потом увеличить ангар?</summary><p>[Ответ инженера]</p></details>
+  </div>
+</div></section>
+
+<section class="art"><div class="wrap">
+  <div class="ph"><div><div class="k">Статьи</div><h2>Полезное о пневмоангарах</h2></div><a class="btn btn-ghost" href="#">Все статьи ↗</a></div>
+  <div class="arts">
+    <div class="ar"><div class="img"><svg viewBox="0 0 400 200" width="100%" height="100%"><rect width="400" height="200" fill="#5B86AE"/><svg x="100" y="50" width="200" height="120"><use href="#hangar"/></svg></svg></div><div class="tags"><span>5 мин чтения</span></div><h3>5 вещей, которые нужно знать перед покупкой ангара</h3></div>
+    <div class="ar"><div class="img"><svg viewBox="0 0 400 200" width="100%" height="100%"><rect width="400" height="200" fill="#4E79A1"/><svg x="60" y="60" width="280" height="120"><use href="#hangar3"/></svg></svg></div><div class="tags"><span>3 мин чтения</span></div><h3>Что такое пневмоангар - за 3 минуты</h3></div>
+    <div class="ar"><div class="img"><svg viewBox="0 0 400 200" width="100%" height="100%"><rect width="400" height="200" fill="#5B86AE"/><circle cx="300" cy="60" r="30" fill="#FFB58A" opacity=".6"/><svg x="80" y="50" width="220" height="130"><use href="#hangar"/></svg></svg></div><div class="tags"><span>6 мин чтения</span></div><h3>Как мы научили пневмоангар держать тепло</h3></div>
+  </div>
+</div></section>
+
+<div class="wrap" id="ct" style="margin-top:96px"><div class="ct">
+  <div><h2 style="color:#fff">Обсудим задачу</h2><p>Пришлите ТЗ или оставьте контакты - инженер подготовит коммерческое предложение в течение рабочего дня.</p>
+    <dl><div><dt>Бесплатно по России</dt><dd>8 800 000-00-00</dd></div><div><dt>Отдел продаж</dt><dd>+7 (8482) 00-00-00</dd></div><div><dt>Производство</dt><dd>Самарская обл., г. Тольятти, [адрес]</dd></div></dl></div>
+  <form onsubmit="return false">
+    <div class="fld"><label for="n">Имя</label><input id="n" type="text"></div>
+    <div class="fld"><label for="t">Телефон</label><input id="t" type="tel"></div>
+    <div class="fld"><label for="c">Компания</label><input id="c" type="text"></div>
+    <div class="file">⇪ Прикрепить ТЗ (необязательно)</div>
+    <button class="btn btn-sig" type="submit">Получить КП</button>
+    <p class="small">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+  </form>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+  <div class="g"><div><b>CHROMAX</b>Завод пневмоангаров · Тольятти<br><br>ООО «[Название]»<br>ИНН [0000000000]</div>
+  <div><b>Продукция</b><a href="#">Chromax Ангар</a><a href="#">Chromax Гига</a><a href="#">Chromax LAAB</a><a href="#">Комплектация</a></div>
+  <div><b>Компания</b><a href="#">О заводе</a><a href="#">Проекты</a><a href="#">Сертификаты</a><a href="#">Статьи</a></div>
+  <div><b>Контакты</b><a href="#">8 800 000-00-00</a><a href="#">+7 (8482) 00-00-00</a><a href="#">[почта]</a></div></div>
+  <div class="bt"><span>© Chromax</span><span>Политика конфиденциальности</span></div>
+</div></footer>
+
+<script>
+const L=document.getElementById('L'),W=document.getElementById('W'),A=document.getElementById('area');
+function upd(){const a=Math.max(0,(+L.value||0)*(+W.value||0));A.textContent=a.toLocaleString('ru-RU')+' м²'}
+L.oninput=W.oninput=upd;
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('on'));b.classList.add('on')});
+</script>
+</body>
+</html>
